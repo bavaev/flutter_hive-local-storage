@@ -20,7 +20,6 @@ class Article extends StatefulWidget {
 class _ArticleState extends State<Article> {
   @override
   Widget build(BuildContext context) {
-    print(widget.name);
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       body: Padding(
