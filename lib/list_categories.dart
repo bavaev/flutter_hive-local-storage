@@ -68,12 +68,13 @@ class _ListCategoriesState extends State<ListCategories> {
         onPressed: () {
           showModalBottomSheet(
             context: context,
+            isScrollControlled: true,
             builder: (BuildContext context) {
               return Container(
                 margin: const EdgeInsets.all(10),
                 child: SafeArea(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
                     child: Row(
                       children: [
                         Expanded(

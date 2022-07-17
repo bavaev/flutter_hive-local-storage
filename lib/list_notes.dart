@@ -70,13 +70,15 @@ class _ListNotesState extends State<ListNotes> {
         onPressed: () {
           showModalBottomSheet(
             context: context,
+            isScrollControlled: true,
             builder: (BuildContext context) {
               return Container(
                 margin: const EdgeInsets.all(10),
                 child: Padding(
                   padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                  child: SafeArea(
+                  child: SingleChildScrollView(
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         const Text('Name'),
                         TextField(
